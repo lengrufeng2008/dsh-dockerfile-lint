@@ -1,0 +1,4 @@
+- insert:
+    - id: dockerfile-lint
+      name: dsh-dockerfile-lint
+      config: {}
