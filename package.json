@@ -1,0 +1,15 @@
+{
+  "name": "dsh-dockerfile-lint",
+  "version": "0.1.0",
+  "description": "Static Dockerfile heuristics for DSH: base tags, root user, sudo, remote shell, apt hygiene, remote ADD, secret-like args.",
+  "type": "module",
+  "bin": { "dsh-dockerfile-lint": "bin/dsh-dockerfile-lint.mjs" },
+  "exports": { ".": "./plugin/index.js", "./lint": "./src/lint.mjs", "./plugin": "./plugin/index.js", "./icon": "./icon.svg" },
+  "files": ["bin", "src", "plugin", "skills", "icon.svg", "README.md", "NOTICE.md", "LICENSE"],
+  "dsh": { "bundle": { "patch": "./plugin/cordis.patch.yml" } },
+  "engines": { "node": ">=20" },
+  "keywords": ["dsh", "deepseek-harness", "docker", "dockerfile", "lint", "devops"],
+  "license": "MIT",
+  "scripts": { "test": "node --test test/*.test.mjs" },
+  "repository": { "type": "git", "url": "https://github.com/lengrufeng2008/dsh-dockerfile-lint" }
+}
